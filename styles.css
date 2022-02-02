@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+
+* {
+  font-family: "Nunito", sans-serif;
+  color: rgb(177, 177, 177);
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  float: top;
+  position: fixed;
+  height: 75px;
+  background-color: black;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-image: linear-gradient(180deg, rgb(31, 31, 31), #2c2c2c, #3f3f3f);
+}
+body {
+  margin: 0;
+  background: rgb(2, 0, 36);
+  background-color: rgba(43, 43, 170, 1);
+  background-image: linear-gradient(
+    135deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(43, 43, 170, 1) 0%,
+    rgba(170, 87, 165, 1) 100%
+  );
+  display: block;
+}
+
+#title {
+  margin-left: 20px;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+.box {
+  width: 30%;
+  height: 200px;
+
+  display: flexbox;
+  z-index: 1;
+  background-color: black;
+  align-self: center;
+  margin-top: 100px;
+  background-image: linear-gradient(180deg, rgb(31, 31, 31), #2c2c2c, #3f3f3f);
+  border-radius: 0.4rem;
+  margin: 150px 5px 5px 5px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.box1 {
+  order: 1;
+  width: inherit;
+
+  height: fit-content;
+}
+
+.box2 {
+  order: 2;
+  width: inherit;
+
+  height: fit-content;
+}
+
+.box3 {
+  order: 1;
+  height: fit-content;
+
+  width: 150%;
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+}
+
+a:hover {
+  color: white;
+  transition-duration: 300ms;
+}
+
+a {
+  transition-duration: 300ms;
+}
