@@ -1,4 +1,4 @@
-
+"use client"
 
 export class BasicOscilator {
     public oscillatorNode: OscillatorNode

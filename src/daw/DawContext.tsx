@@ -10,7 +10,12 @@ export class DawContext {
 
     constructor(options?: AudioContextOptions) {
         //window.AudioContext = window.AudioContext || window.webkitAudioContext;
-        this.audioCtx = new window.AudioContext(options) || new AudioContext(options);
+        if (typeof(window) === "undefined") {
+            this.audioCtx = new AudioContext(options);
+        } else {
+            this.audioCtx = new window.AudioContext(options);
+        }
+        
 
         this.basicSynth = new BasicSynth(this.audioCtx);
         this.basicSynth.osc.setFrequency(getFrequencyFromNote(1));

@@ -1,3 +1,5 @@
+"use client"
+
 import { BasicOscilator } from "./BasicOscillator";
 
 export class BasicSynth {
