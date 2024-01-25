@@ -1,6 +1,5 @@
 "use client"
 
-import Window from "@/components/Window"
 import BasicSamplerCore from "@/daw-core/basic-sampler/BasicSamplerCore"
 import BasicSynthCore from "@/daw-core/basic-synth/BasicSynthCore"
 import BasicSynthUI from "@/daw-core/basic-synth/BasicSynthUI"
