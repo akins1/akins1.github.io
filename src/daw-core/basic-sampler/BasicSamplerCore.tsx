@@ -3,13 +3,18 @@
 import { DawContext } from "@/daw/DawContext";
 import { BlackPianoNote, WhitePianoNote } from "../piano/Piano";
 import { blackNoteMap, calculateFrequency, getFrequencyFromNote, whiteNoteMap } from "@/daw-webaudio/utils/NoteFrequencyBindings";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
+import Sampler from "./Sampler";
+import { GlobalDawContext } from "@/app/GlobalDawContext";
 
 
 
 
-export default function BasicSamplerCore ({ dawCtx }: { dawCtx: DawContext }) {
+export default function BasicSamplerCore () { //{ dawCtx }: { dawCtx: DawContext }) {
 
+    const dawCtx = useContext(GlobalDawContext);
+
+    const sampler = useRef<Sampler>(new Sampler(dawCtx.audioCtx, undefined));
     const [audioSample, setAudioSample] = useState<AudioBuffer>(new AudioBuffer({length: 1, sampleRate: 44100}));
     const [gainNode, setGainNode] = useState<GainNode>(dawCtx.audioCtx.createGain());
     const [fileInputText, setFileInputText] = useState("Select Audio File");

@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <main className="flex min-h-screen bg-slate-950 text-slate-500 flex-col items-center justify-between p-24">
         {/* <BasicSynthUI /> */}
-        <BasicSynthCore dawCtx={dawContext} />
-        <BasicSamplerCore dawCtx={dawContext} />
+        {/* <BasicSynthCore /> */}
+        {/* <BasicSamplerCore dawCtx={dawContext} /> */}
 
     </main>
   )

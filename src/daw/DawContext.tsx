@@ -20,7 +20,7 @@ export class DawContext {
         this.basicSynth = new BasicSynth(this.audioCtx);
         this.basicSynth.osc.setFrequency(getFrequencyFromNote(1));
         
-        this.basicSynth.osc.disconnect();
+        //this.basicSynth.osc.disconnect();
     }
 
 
